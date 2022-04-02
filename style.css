@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(223, 197, 197, 0.829);
+}
+.container{
+    height: 350px;
+    width: 300px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px 0px #00000030;
+    transition: .6s ease-in-out;
+    overflow: hidden;
+}
+.productImage{
+    position: relative;
+    height: 220px;
+    border-radius: 15px;
+    background: url(images/1.jpg);
+    background-size: cover;
+}
+.productImage::after{
+    content: '$15';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #371b0fcf;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    transition: .2s ease-in-out;
+    opacity: 0;
+}
+.container:hover > .productImage::after{
+    opacity: 1;
+}
+.shortDescription{
+    height: 110px;
+    border-radius: 15px;
+    padding-top: 13px;
+    box-sizing: border-box;
+}
+.shortDescription .heading{
+    font-family: 'Roboto', sans-serif;
+}
+.shortDescription .description{
+    font-family: 'Roboto', sans-serif;
+    padding-top: 6px;
+    line-height: 1.3;
+}
+.description .readMore{
+    color: #5A2713;
+    cursor: pointer;
+    font-weight: 600;
+}
+.description .moretxt{
+    display: none;
+}
+    /* classes below are adding with javascript  */
+.large-con{
+    height: 450px !important;
+}
+.moreDescription .moretxt{
+    display: inline !important;
+}
